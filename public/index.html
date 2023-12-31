@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>聊天室</title>
+    <link rel="stylesheet" href="lib/jquery-mCustomScrollbar/css/jquery.mCustomScrollbar.min.css"/>
+    <link rel="stylesheet" href="lib/jquery-emoji/css/jquery.emoji.css"/>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="loginBox" style="display: block;">
+      <h3>在线聊天室</h3>
+      <p>用户名</p>
+      <input type="text" placeholder="请输入用户名" id="username" />
+      <p>密码</p>
+      <input type="text" placeholder="请输入密码" id="password" />
+      <p>头像</p>
+      <ul class="avatar" id="loginAvatar">
+        <li class="now"><img src="images/avatar01.png" alt="" /></li>
+        <li><img src="images/avatar02.jpg" alt="" /></li>
+        <li><img src="images/avatar03.jpg" alt="" /></li>
+        <li><img src="images/avatar04.jpg" alt="" /></li>
+        <li><img src="images/avatar05.jpg" alt="" /></li>
+
+      </ul>
+      <button class="buttonUI" id="loginButton">登录</button>
+    </div>
+    
+    <div class="chatBox" style="display: none;">
+        <div class="userList">
+          <div class="title"><h3>用户列表</h3></div>
+          <ul>
+            
+          </ul>
+        </div>
+        <div class="systemMessage">
+          <div class="header">
+            <div class="avatar">
+              <img class="img avatarUrl" src="images/avatar2.jpg" alt="" />
+            </div>
+            <div class="info">
+              <h3 class="username">未知</h3>
+            </div>
+          </div>
+          <div class="title"><h3>系统消息</h3></div>
+        </div>     
+      
+      <div class="box">        
+        <div class="boxHead"><h3>当前在线用户(<span id="userCount">未获取</span>)</h3></div>        
+        <div class="boxMiddle">
+
+        </div>        
+          <div class="boxBottom">
+            <div class="toolbar">
+              <a href="javascript:;" title="图片" class="file">
+                <label for="file"></label>
+                <input type="file" id="file" style="display: none;">
+              </a>
+            </div>
+            <div class="content">
+              <div class="text" id="content" contenteditable></div>
+            </div>
+            <div class="action">
+              <a class="sendButton" id="sendButton" href="javascript:;">发送</a>
+            </div>
+          </div>
+      </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="lib/jquery-mCustomScrollbar/script/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
